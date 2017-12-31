@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import TestUtils from 'react-dom/test-utils';
-import App from '../src/components/App';
+import App from '../src/App';
 
 it('App is rendered', () => {
     // Render App in the document
