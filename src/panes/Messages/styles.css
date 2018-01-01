@@ -1,4 +1,24 @@
 .Messages {
+  padding: var(--spacing-none, 0);
+}
+
+.messageList {
+  list-style: none;
   margin: var(--spacing-none, 0);
   padding: var(--spacing-none, 0);
+}
+
+.message:first-child {
+  padding-top: var(--spacing-small, .5rem);
+}
+
+.message {
+  padding-left: var(--spacing-small, .5rem);
+  padding-right: var(--spacing-small, .5rem);
+  padding-top: var(--spacing-extra-small, .25rem);
+  padding-bottom: var(--spacing-extra-small, .25rem);
+}
+
+.message:nth-child(odd) {
+  background-color: var(--white-30, rgba(255, 255, 255, .3));
 }

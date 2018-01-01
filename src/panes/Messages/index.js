@@ -2,33 +2,36 @@ import React from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 
-import messages from "store/selectors/messages";
+import messageSelectors from "store/selectors/messages";
 
 import styles from "./styles.css";
 
 const propTypes = {
   className: PropTypes.string,
-  messages: PropTypes.arrayOf(messages.shape)
+  messages: PropTypes.arrayOf(messageSelectors.shape).isRequired
 };
+
+const Message = ({id, body}) => <li key={id} className={styles.message}>{body}</li>
 
 class Messages extends React.Component {
   render() {
-    const cssClasses = cx(styles.Messages, this.props.className);
+    const {className, messages} = this.props;
+    const cssClasses = cx(styles.Messages, className);
+    const messageBlocks = messages.map((m) => <Message id={m.id} body={m.body} />);
     return (
       <div className={cssClasses}>
-        <h3>Messages: {this.props.messages.length}</h3>
-
+        <ul className={styles.messageList}>
+          {messageBlocks}
+        </ul>
       </div>
     );
   }
 }
 
 const mapStateToProps = (state, ownProps) => {
-  console.log("OVER HERE", messages);
   return {
-    messages: messages.current(state)
+    messages: messageSelectors.current(state)
   };
 };
 
@@ -36,10 +39,5 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   return {};
 };
 
-// const mergeProps = (stateProps, dispatchProps, ownProps) => {
-//   return {...ownProps, ...stateProps, ...dispatchProps};
-// }
-
 Messages.propTypes = propTypes;
-Messages.defaultProps = {messages: []};
 export default connect(mapStateToProps, mapDispatchToProps)(Messages);

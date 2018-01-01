@@ -1,4 +1,48 @@
 .Drafting {
+  background-color: var(--blue, #357edd);
+  composes: basicFlexColumn from global;
+  align-content: stretch;
+  align-items: stretch;
   margin: var(--spacing-none, 0);
+  padding: var(--spacing-extra-small, .25rem);
+}
+
+.blockList {
+  composes: basicFlexRow from global;
+  composes: basicFlexItem from global;
+  flex: 0 1 auto;
+  list-style: none;
+  margin: var(--spacing-none, 0);
+  margin-bottom: var(--spacing-extra-extra-small, .125rem);
   padding: var(--spacing-none, 0);
+}
+
+.block {
+  composes: basicFlexItem from global;
+  composes: borders from global;
+  margin-left: var(--spacing-extra-extra-small, .125rem);
+  margin-right: var(--spacing-extra-extra-small, .125rem);
+  background-color: var(--white-40, rgba(255, 255, 255, .4));
+  & table {
+    width: 100%;
+  }
+  & td:last-child {
+    text-align: right;
+  }
+  & th {
+    text-align: center;
+  }
+}
+
+.draftingBlock {
+  composes: basicFlexItem from global;
+  composes: borders from global;
+  margin: var(--spacing-none, 0);
+  margin-top: var(--spacing-extra-extra-small, .125rem);
+  flex: 1 1 auto;
+  background-color: var(--dark-blue, #00449e);
+}
+
+.item {
+  composes: basicFlexItem from global;
 }

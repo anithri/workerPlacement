@@ -4,6 +4,7 @@ import cx from "classnames";
 import styles from "./styles.css";
 import Player from "panes/Player";
 import Messages from "panes/Messages";
+import Drafting from "panes/Drafting";
 
 const propTypes = {
   className: PropTypes.string
@@ -15,15 +16,13 @@ class Home extends React.Component {
     return (
       <div className={cssClasses}>
 
-        <Player className={styles.playerOne} playerId="One" />
-        <Player className={styles.playerTwo} playerId="Two" />
-        <Player className={styles.playerThree} playerId="Three" />
-        <Player className={styles.playerFour} playerId="Four" />
+        <Player className={styles.playerOne} playerId="One"/>
+        <Player className={styles.playerTwo} playerId="Two"/>
+        <Player className={styles.playerThree} playerId="Three"/>
+        <Player className={styles.playerFour} playerId="Four"/>
+        <Drafting className={styles.drafting}/>
         <div className={styles.projects}>
           <h1>Projects</h1>
-        </div>
-        <div className={styles.drafting}>
-          <h1>Drafting</h1>
         </div>
         <Messages className={styles.messages}/>
       </div>

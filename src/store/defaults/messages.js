@@ -1,5 +1,8 @@
 const defaultValues = {
-  all: [],
+  all: [{
+    id: 'testing',
+    body: "wut?"
+  }],
   showing: 6
 };
 

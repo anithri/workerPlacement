@@ -6,11 +6,14 @@ import configureStore from './Store';
 import 'styles/App.css';
 import 'tachyons-custom/css/tachyons.css';
 import PageRouter from './pages/Router';
+import action from 'redux-auto';
 
-class App extends React.PureComponent {
+
+class App extends React.Component {
   render() {
     const history = createHistory();
     const store = configureStore(history);
+    action.messages.add({body: "wooticus Prime!"});
     return (
       <Provider store={store}>
         <PageRouter history={history}/>
