@@ -4,10 +4,13 @@ import cx from "classnames";
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
+import messages from "store/selectors/messages";
+
 import styles from "./styles.css";
 
 const propTypes = {
   className: PropTypes.string,
+  messages: PropTypes.arrayOf(messages.shape)
 };
 
 class Messages extends React.Component {

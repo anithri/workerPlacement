@@ -5,7 +5,7 @@ import { compose, createStore, applyMiddleware, combineReducers } from 'redux';
 
 const dtx = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
 
-const webpackModules = require.context('./store', true, /^.*\.js$/);
+const webpackModules = require.context('./store/reducers', true, /^.*\/.*\.js$/);
 
 const composeEnhancers =
   typeof window === 'object' && dtx ? dtx({ name: 'Wooticus Prime' }) : compose;

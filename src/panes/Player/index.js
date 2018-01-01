@@ -3,16 +3,13 @@ import PropTypes from "prop-types";
 import cx from "classnames";
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import players from 'selectors/players';
+import players from 'store/selectors/players';
 import styles from "./styles.css";
 
 const propTypes = {
   className: PropTypes.string,
   playerId: PropTypes.string.isRequired,
-  player: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    id: PropTypes.string.isRequired
-  })
+  player: players.shape
 };
 
 class Player extends React.Component {

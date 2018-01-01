@@ -1,14 +1,8 @@
-:root {
-  --borders: {
-    border-style: solid;
-    border-width: thin;
-    border-color: var(--black-60, rgba(0, 0, 0, .6));
-    border-radius: var(--border-radius-3, .5rem);
-  };
-}
-
 .borders {
-  @apply --borders;
+  border-style: solid;
+  border-width: thin;
+  border-color: var(--black-60, rgba(0, 0, 0, .6));
+  border-radius: var(--border-radius-3, .5rem);
 }
 
 .max {
@@ -23,8 +17,7 @@
   grid-gap: var(--spacing-small, .5rem);
 }
 
-.gridRegion {
-  @apply --borders;
+.gridBase > * {
   background-color: var(--black-20, rgba(0, 0, 0, .2));
   padding: var(--spacing-extra-small, .25rem);
   border-style: solid;
@@ -32,3 +25,4 @@
   border-color: var(--black-60, rgba(0, 0, 0, .6));
   border-radius: var(--border-radius-3, .5rem);
 }
+
