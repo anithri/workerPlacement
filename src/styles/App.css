@@ -8,9 +8,6 @@ html, body, #appContainer, .max  {
   margin: var(--spacing-none, 0);
 }
 
-.app p {
-  background-color: yellow;
-}
 
 h1:first-child,
 h2:first-child,
@@ -19,5 +16,5 @@ h4:first-child,
 h5:first-child,
 h6:first-child {
   margin-top: var(--spacing-none, 0);
-
+  color: gray(30%);
 }

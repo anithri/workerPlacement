@@ -44,10 +44,8 @@ module.exports = {
               loader: 'css-loader',
               options: {
                 sourceMap: true,
-                importLoaders: 1
               }
             },
-            {loader: 'postcss-loader', options: {sourceMap: true}}
           ]
         })
       },
@@ -68,8 +66,14 @@ module.exports = {
                 localIdentName: '[path][local]-[hash:base64:5]'
               }
             },
-            {loader: 'postcss-loader', options: {sourceMap: true}}
-          ]
+            {
+              loader: 'postcss-loader',
+              options: {
+                config: {
+                  path: 'configs/postcss'
+                }
+              }
+            }          ]
         })
       },
       {

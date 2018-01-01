@@ -2,3 +2,8 @@
   margin: var(--spacing-none, 0);
   padding: var(--spacing-none, 0);
 }
+
+.Hi > h1 {
+  text-align: center;
+  color: gray(40%);
+}
