@@ -1,5 +1,45 @@
 .Home {
-  margin: var(--spacing-none, 0);
-  padding: var(--spacing-none, 0);
+  composes: max from global;
+  composes: gridBase from global;
+
   background-color: var(--washed-blue);
+
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "playerOne drafting playerTwo" "playerOne projects playerTwo" "playerFour projects playerThree" "playerFour messages playerThree";
+}
+
+.playerOne {
+  composes: gridRegion from global;
+  grid-area: playerOne;
+}
+
+.playerTwo {
+  composes: gridRegion from global;
+  grid-area: playerTwo;
+}
+
+.playerThree {
+  composes: gridRegion from global;
+  grid-area: playerThree;
+}
+
+.playerFour {
+  composes: gridRegion from global;
+  grid-area: playerFour;
+}
+
+.projects {
+  composes: gridRegion from global;
+  grid-area: projects;
+}
+
+.messages {
+  composes: gridRegion from global;
+  grid-area: messages;
+}
+
+.drafting {
+  composes: gridRegion from global;
+  grid-area: drafting;
 }

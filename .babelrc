@@ -4,12 +4,14 @@
     "react" // Transpile React components to JavaScript
   ],
   "plugins": [
+    "transform-object-rest-spread",
     "react-hot-loader/babel", // Enables React code to work with HMR.
     [
-      "module-resolver", {
-      "root": ["./src"]
-    }
-    ]
+      "module-resolver",
+      {
+        "root": ["./src"]
+      }
+    ],
   ],
   "env": {
     "test": {

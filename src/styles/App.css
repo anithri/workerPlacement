@@ -1,13 +1,12 @@
 @import './_variables.css';
-
-html, body, #appContainer, .max  {
+@import './_properties.css';
+html, body, #appContainer {
   width: 100%;
   height: 100%;
   font-family: var(--sans-serif, sans-serif);
   padding: var(--spacing-none, 0);
   margin: var(--spacing-none, 0);
 }
-
 
 h1:first-child,
 h2:first-child,
@@ -16,5 +15,4 @@ h4:first-child,
 h5:first-child,
 h6:first-child {
   margin-top: var(--spacing-none, 0);
-  color: gray(30%);
 }
