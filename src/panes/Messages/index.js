@@ -15,30 +15,31 @@ const propTypes = {
 
 class Messages extends React.Component {
   render() {
-    const cssClasses = cx(styles.Messages, this.props.className)
+    const cssClasses = cx(styles.Messages, this.props.className);
     return (
-      <div className={}>
-        <h3>Messages</h3>
+      <div className={cssClasses}>
+        <h3>Messages: {this.props.messages.length}</h3>
+
       </div>
     );
   }
 }
 
 const mapStateToProps = (state, ownProps) => {
-  return {};
+  console.log("OVER HERE", messages);
+  return {
+    messages: messages.current(state)
+  };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {};
 };
 
-const mergeProps = (stateProps, dispatchProps, ownProps) => {
-  return {...ownProps, ...stateProps, ...dispatchProps};
-}
+// const mergeProps = (stateProps, dispatchProps, ownProps) => {
+//   return {...ownProps, ...stateProps, ...dispatchProps};
+// }
 
 Messages.propTypes = propTypes;
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps/* , */
-  /* mergeProps */
-)(Messages);
+Messages.defaultProps = {messages: []};
+export default connect(mapStateToProps, mapDispatchToProps)(Messages);

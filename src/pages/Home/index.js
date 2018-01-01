@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import cx from "classnames";
 import styles from "./styles.css";
 import Player from "panes/Player";
-import Hi from "components/Hi";
+import Messages from "panes/Messages";
 
 const propTypes = {
   className: PropTypes.string
@@ -25,10 +25,7 @@ class Home extends React.Component {
         <div className={styles.drafting}>
           <h1>Drafting</h1>
         </div>
-        <div className={styles.messages}>
-          <h1>Messages</h1>
-        </div>
-
+        <Messages className={styles.messages}/>
       </div>
     );
   }

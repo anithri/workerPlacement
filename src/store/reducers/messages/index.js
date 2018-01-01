@@ -1,7 +1,5 @@
-const defaultValues = {
-  messages: []
-};
+import defaultApp from 'store/defaults/messages';
 
-export default function app(app = defaultValues, action) {
+export default function app(app = defaultApp, action) {
   return app;
 }
