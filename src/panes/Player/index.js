@@ -2,23 +2,31 @@ import React from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import players from 'store/selectors/players';
+import Badge from "components/Badge";
 import styles from "./styles.css";
 
 const propTypes = {
   className: PropTypes.string,
   playerId: PropTypes.string.isRequired,
-  player: players.shape
+  player: players.shape,
+  spheres: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
 class Player extends React.Component {
   render() {
-    const {className, player} = this.props;
+    const {className, player, spheres} = this.props;
     const cssClasses = cx(styles.Player, className);
+    // key={s} className={s}>{s}</Badgeli>
+    const badges = player.spheres.map(s => <li key={s}><Badge className={s}>{s}</Badge></li>)
     return (
       <div className={cssClasses}>
-        <h3>{player.name}</h3>
+        <header>
+          <h3>{player.name}</h3>
+        </header>
+        <ul className={styles.badgeRow}>
+          {badges}
+        </ul>
       </div>
     );
   }

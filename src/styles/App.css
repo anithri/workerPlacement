@@ -1,6 +1,7 @@
 @import './_variables.css';
 @import './_properties.css';
 @import './flexy.css';
+@import './skins.css';
 
 html, body, #appContainer {
   width: 100%;

@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 
 export const shape = PropTypes.shape({
   id: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
+  spheres: PropTypes.arrayOf(PropTypes.string).isRequired
 });
 
 export const all = state => state.players;

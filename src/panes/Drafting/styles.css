@@ -31,6 +31,8 @@
   }
   & th {
     text-align: center;
+    padding: var(--spacing-none, 0);
+
   }
 }
 
