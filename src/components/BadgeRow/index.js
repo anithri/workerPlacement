@@ -19,7 +19,7 @@ const propTypes = {
 };
 
 const BadgeRow = ({badges, className}) => {
-
+  console.log(badges);
   const all = badges.map(({name, id, theme}) => {
     return (
       <Badge className={theme} key={id}>{name}</Badge>

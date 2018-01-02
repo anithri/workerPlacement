@@ -2,7 +2,7 @@ import _shuffle from 'lodash/shuffle';
 
 import defaultWorkers from './workers';
 
-const workers = _shuffle(Object.keys(defaultWorkers)).splice(0,4);
+const workers = _shuffle(Object.values(defaultWorkers)).map(w => w.id);
 
 const combos = workers.map(skip => workers.filter(w => w != skip));
 
@@ -32,5 +32,7 @@ const defaultValues = {
     score: 15,
   }
 };
+
+export const playerIds = Object.keys(defaultValues);
 
 export default defaultValues;

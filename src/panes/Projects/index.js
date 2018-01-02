@@ -12,9 +12,9 @@ const propTypes = {
 
 class Projects extends React.Component {
   render() {
-    const cssClasses = cx(styles.Projects, this.props.className)
+    const cssClasses = cx(styles.Projects, this.props.className);
     return (
-      <div className={}>
+      <div className={cssClasses}>
         <h3>Projects</h3>
       </div>
     );

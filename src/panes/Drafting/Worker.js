@@ -1,7 +1,8 @@
 import React from "react";
 import cx from 'classnames';
 
-const Worker = ({name, id, reserve, bag, working, className}) => {
+const Worker = ({name, id, summary, className}) => {
+  const {reserve, draw, active, dead} = summary;
   return (
     <li key={id} className={cx(className)}>
       <table>
@@ -13,15 +14,19 @@ const Worker = ({name, id, reserve, bag, working, className}) => {
         <tbody>
         <tr>
           <td>In Bag:</td>
-          <td>{bag}</td>
+          <td>{draw}</td>
         </tr>
         <tr>
-          <td>Working:</td>
-          <td>{working}</td>
+          <td>Active:</td>
+          <td>{active}</td>
         </tr>
         <tr>
           <td>Reserve:</td>
           <td>{reserve}</td>
+        </tr>
+        <tr>
+          <td>Dead:</td>
+          <td>{dead}</td>
         </tr>
         </tbody>
       </table>

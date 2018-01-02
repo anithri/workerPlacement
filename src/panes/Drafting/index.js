@@ -27,7 +27,7 @@ class Drafting extends React.Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    workers: Object.values(workerSelectors.all(state))
+    workers: Object.values(workerSelectors.all(state)),
   };
 };
 
