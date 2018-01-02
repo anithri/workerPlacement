@@ -2,39 +2,45 @@ import React from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 import { connect } from 'react-redux';
-import players from 'store/selectors/players';
-import Badge from "components/Badge";
+import qPlayers from 'store/selectors/players';
+import qWorkers from "store/selectors/workers";
+import BadgeRow from "components/BadgeRow";
 import styles from "./styles.css";
 
 const propTypes = {
   className: PropTypes.string,
   playerId: PropTypes.string.isRequired,
-  player: players.shape,
-  spheres: PropTypes.arrayOf(PropTypes.string).isRequired
+  player: qPlayers.shape,
+  spheres: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    theme: PropTypes.string.isRequired
+  })).isRequired
 };
 
 class Player extends React.Component {
   render() {
     const {className, player, spheres} = this.props;
     const cssClasses = cx(styles.Player, className);
-    // key={s} className={s}>{s}</Badgeli>
-    const badges = player.spheres.map(s => <li key={s}><Badge className={s}>{s}</Badge></li>)
     return (
       <div className={cssClasses}>
-        <header>
+        <header className={styles.title}>
           <h3>{player.name}</h3>
+          <h3>Score: {player.score}</h3>
         </header>
-        <ul className={styles.badgeRow}>
-          {badges}
-        </ul>
+        <BadgeRow badges={spheres}/>
       </div>
     );
   }
 }
 
 const mapStateToProps = (state, ownProps) => {
+  const player = qPlayers.find(ownProps.playerId, state);
+  const workerIds = player.spheres;
+  const spheres = workerIds.map(id => qWorkers.find(id, state));
   return {
-    player: players.find(ownProps.playerId, state)
+    player,
+    spheres
   };
 };
 

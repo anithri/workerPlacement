@@ -1,4 +1,0 @@
-.Badge {
-  font-size: var(--font-size-6, .875rem);
-  composes: borders from global;
-}

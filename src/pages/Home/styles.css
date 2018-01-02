@@ -2,7 +2,7 @@
   composes: max from global;
   composes: gridBase from global;
   background-color: var(--washed-blue);
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: var(--width-5, 15rem) 1fr var(--width-5, 15rem);
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-areas: "playerOne drafting playerTwo"
                        "playerOne projects playerTwo"

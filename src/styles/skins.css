@@ -1,28 +1,23 @@
 .kgb {
   background-color: var(--purple, #5e2ca5);
   color: var(--near-white, #f4f4f4);
-  border-color: var(--near-white, #f4f4f4);
 }
 
 .party {
   background-color: var(--dark-green, #137752);
   color: var(--near-white, #f4f4f4);
-  border-color: var(--near-white, #f4f4f4);
 }
 
 .politburo {
   background-color: var(--dark-blue, #00449e);
   color: var(--near-white, #f4f4f4);
-  border-color: var(--near-white, #f4f4f4);
 }
 
 .proletariat {
   background-color: var(--gold, #ffb700);
-  color: var(--near-black, #111);
 }
 
 .redArmy {
   background-color: var(--dark-red, #e7040f);
   color: var(--near-white, #f4f4f4);
-  border-color: var(--near-white, #f4f4f4);
 }

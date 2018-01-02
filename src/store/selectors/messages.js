@@ -12,7 +12,6 @@ export const showing = (state) => state.messages.showing;
 const current = createSelector(
   [all, showing],
   (messages,show) => {
-    console.log("currentSelector", messages, show);
     return messages.slice(-1 * Math.max(messages.length - show, messages.length))
   }
 );

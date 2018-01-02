@@ -1,20 +1,27 @@
 .Player {
-  & > header > h3 {
     width: 100%;
-    text-align: center;
-  }
-
 }
 
-.badgeRow{
+.title {
   composes: basicFlexRow from global;
-  align-content: stretch;
-  align-items: stretch;
-  list-style: none;
-  padding: var(--spacing-none, 0);
+  width: 100%;
 
+  & > h3 {
+    display: inline-block;
+    padding-top: var(--spacing-extra-small, .25rem);
+    padding-bottom: var(--spacing-extra-small, .25rem);
+    margin: var(--spacing-none, 0);
+    width: 100%;
+
+  }
 }
 
-.badgeRow li {
+.title > h3:first-child {
+  flex: 2 1 auto;
+  text-align: left;
+}
+
+.title > h3:last-child {
   flex: 1 1 auto;
+  text-align: right;
 }

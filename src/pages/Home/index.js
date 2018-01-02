@@ -15,7 +15,6 @@ class Home extends React.Component {
     const cssClasses = cx(styles.Home, this.props.className, 'max');
     return (
       <div className={cssClasses}>
-
         <Player className={styles.playerOne} playerId="One"/>
         <Player className={styles.playerTwo} playerId="Two"/>
         <Player className={styles.playerThree} playerId="Three"/>
