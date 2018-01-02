@@ -2,14 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 import { connect } from 'react-redux';
-import workerSelectors from 'store/selectors/workers';
+import qWorkers from 'store/selectors/workers';
 import styles from "./styles.css";
 import Worker from "./Worker";
 import DraftingBlock from "./DraftingBlock";
 
 const propTypes = {
   className: PropTypes.string,
-  workers: workerSelectors.shape
+  workers: qWorkers.shape
 };
 
 class Drafting extends React.Component {
@@ -27,7 +27,7 @@ class Drafting extends React.Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    workers: Object.values(workerSelectors.all(state)),
+    workers: Object.values(qWorkers.summarizedWorkers(state)),
   };
 };
 

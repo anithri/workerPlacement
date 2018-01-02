@@ -11,8 +11,6 @@ const composeEnhancers =
   typeof window === 'object' && dtx ? dtx({ name: 'Wooticus Prime' }) : compose;
 
 function configureStore(history) {
-  console.log('configuring Store');
-
   reducers['router'] = routerReducer;
 
   const enhancer = composeEnhancers(

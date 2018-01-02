@@ -6,6 +6,7 @@ import qPlayers from 'store/selectors/players';
 import qWorkers from "store/selectors/workers";
 import BadgeRow from "components/BadgeRow";
 import styles from "./styles.css";
+import actions from "redux-auto";
 
 const propTypes = {
   className: PropTypes.string,

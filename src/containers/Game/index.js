@@ -2,10 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 import { connect } from 'react-redux';
+import qDeck from 'store/selectors/deck';
+import qBag from "store/selectors/bag";
 import Player from "panes/Player";
 import Messages from "panes/Messages";
 import Drafting from "panes/Drafting";
 import Projects from "panes/Projects";
+import actions from "redux-auto";
 
 import styles from "./styles.css";
 
@@ -18,15 +21,31 @@ const propTypes = {
     "playerFour": PropTypes.string.isRequired,
     "drafting": PropTypes.string.isRequired,
     "projects": PropTypes.string.isRequired,
-    "messages": PropTypes.string.isRequired,
-  }),
+    "messages": PropTypes.string.isRequired
+  })
 
 };
 
 class Game extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      started: false,
+    }
+  }
+  componentDidMount() {
+    if (this.props.phase < 0) {
+      actions.game.start({
+        deck: this.props.newDeck,
+        bag: this.props.newBag
+      });
+    }
+    // generate a new deck
+  }
+
   render() {
-    const {className, regions} = this.props
-    const cssClasses = cx(styles.Game, className)
+    const {className, regions} = this.props;
+    const cssClasses = cx(styles.Game, className);
     return (
       <div className={cssClasses}>
         <Player className={regions.playerOne} playerId="One"/>
@@ -42,8 +61,15 @@ class Game extends React.Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
+  const newDeck = state.game.deck ? null : qDeck.deal(state);
+  const newBag = state.game.bag ? null : qBag.fresh(state);
   return {
-
+    phase: state.game.phase,
+    order: state.game.order,
+    deck: state.game.deck,
+    bag: state.game.bag,
+    newDeck,
+    newBag,
   };
 };
 
@@ -53,7 +79,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 
 const mergeProps = (stateProps, dispatchProps, ownProps) => {
   return {...ownProps, ...stateProps, ...dispatchProps};
-}
+};
 
 Game.propTypes = propTypes;
 export default connect(

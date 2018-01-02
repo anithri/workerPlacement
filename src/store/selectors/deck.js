@@ -1,14 +1,19 @@
 import { createSelector } from 'reselect';
-import { shape } from "../defaults/deck"
+import { shape } from "../defaults/deck";
+import defaultDeck from "../defaults/deck";
+import { cardIds } from "../defaults/cards";
 
-export const all = state => state.deck;
-
-export const find = (id, state) => all(state)[id];
+export const deal = (state) => {
+  return {
+    ...defaultDeck,
+    active: cardIds.slice(16, 0),
+    draw: cardIds.slice(16)
+  };
+};
 
 const selectors = {
   shape,
-  all,
-  find
+  deal
 };
 
 export default selectors;
