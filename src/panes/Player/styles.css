@@ -1,27 +1,24 @@
 .Player {
-    width: 100%;
-}
-
-.title {
-  composes: basicFlexRow from global;
+  border-top-left-radius: var(--border-radius-3, .5rem);
+  border-top-right-radius: var(--border-radius-3, .5rem);
   width: 100%;
-
-  & > h3 {
-    display: inline-block;
-    padding-top: var(--spacing-extra-small, .25rem);
-    padding-bottom: var(--spacing-extra-small, .25rem);
-    margin: var(--spacing-none, 0);
-    width: 100%;
-
-  }
 }
 
-.title > h3:first-child {
-  flex: 2 1 auto;
-  text-align: left;
+.Player > header {
+  border-top-left-radius: var(--border-radius-3, .5rem);
+  border-top-right-radius: var(--border-radius-3, .5rem);
+  grid-gap: 10px;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  background-color: #fff;
+  color: #444;
 }
 
-.title > h3:last-child {
-  flex: 1 1 auto;
-  text-align: right;
+.Player > header > h3 {
+  margin-top: var(--spacing-none);
+  margin-bottom: var(--spacing-none);
+  text-align: center;
+  padding: var(--spacing-small);
+
 }
+

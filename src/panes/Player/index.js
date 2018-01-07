@@ -25,9 +25,9 @@ class Player extends React.Component {
     const cssClasses = cx(styles.Player, className);
     return (
       <div className={cssClasses}>
-        <header className={styles.title}>
+        <header>
           <h3>{player.name}</h3>
-          <h3>Score: {player.score}</h3>
+          <h3>{player.score}</h3>
         </header>
         <BadgeRow badges={spheres}/>
       </div>

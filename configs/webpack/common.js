@@ -8,7 +8,7 @@ const CSSWebpackPluginConfig = new ExtractTextPlugin('application.css');
 
 module.exports = {
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx']
   },
   context: resolve(__dirname, '../../src'),
   module: {
@@ -16,7 +16,7 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         use: ['babel-loader'],
-        exclude: /node_modules/,
+        exclude: /node_modules/
       },
       {
         test: /styles\/.*\.css$/,
@@ -31,7 +31,12 @@ module.exports = {
                 importLoaders: 1
               }
             },
-            {loader: 'postcss-loader', options: {sourceMap: true}}
+            {
+              loader: 'postcss-loader',
+              options: {
+                sourceMap: true
+              }
+            }
           ]
         })
       },
@@ -43,9 +48,9 @@ module.exports = {
             {
               loader: 'css-loader',
               options: {
-                sourceMap: true,
+                sourceMap: true
               }
-            },
+            }
           ]
         })
       },
@@ -69,32 +74,35 @@ module.exports = {
             {
               loader: 'postcss-loader',
               options: {
+                sourceMap: true,
+                browsers: ['ie >= 10', 'last 3 versions'],
                 config: {
                   path: 'configs/postcss'
                 }
               }
-            }          ]
+            }
+          ]
         })
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
         loaders: [
           'file-loader?hash=sha512&digest=hex&name=img/[hash].[ext]',
-          'image-webpack-loader?bypassOnDebug&optipng.optimizationLevel=7&gifsicle.interlaced=false',
-        ],
-      },
-    ],
+          'image-webpack-loader?bypassOnDebug&optipng.optimizationLevel=7&gifsicle.interlaced=false'
+        ]
+      }
+    ]
   },
   plugins: [
     new StyleLintPlugin(),
-    new HtmlWebpackPlugin({template: 'index.html',}),
+    new HtmlWebpackPlugin({template: 'index.html'}),
     CSSWebpackPluginConfig
   ],
   externals: {
     'react': 'React',
-    'react-dom': 'ReactDOM',
+    'react-dom': 'ReactDOM'
   },
   performance: {
-    hints: false,
-  },
+    hints: false
+  }
 };

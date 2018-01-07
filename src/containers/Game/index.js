@@ -10,8 +10,6 @@ import Drafting from "panes/Drafting";
 import Projects from "panes/Projects";
 import actions from "redux-auto";
 
-import styles from "./styles.css";
-
 const propTypes = {
   className: PropTypes.string,
   regions: PropTypes.objectOf({
@@ -45,9 +43,8 @@ class Game extends React.Component {
 
   render() {
     const {className, regions} = this.props;
-    const cssClasses = cx(styles.Game, className);
     return (
-      <div className={cssClasses}>
+      <div className={className}>
         <Player className={regions.playerOne} playerId="One"/>
         <Player className={regions.playerTwo} playerId="Two"/>
         <Player className={regions.playerThree} playerId="Three"/>
