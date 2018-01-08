@@ -12,6 +12,7 @@ import actions from "redux-auto";
 
 const propTypes = {
   className: PropTypes.string,
+  theme: PropTypes.objectOf(PropTypes.string),
   regions: PropTypes.objectOf({
     "playerOne": PropTypes.string.isRequired,
     "playerTwo": PropTypes.string.isRequired,
@@ -42,7 +43,7 @@ class Game extends React.Component {
   }
 
   render() {
-    const {className, regions} = this.props;
+    const {className, regions, themes} = this.props;
     return (
       <div className={className}>
         <Player className={regions.playerOne} playerId="One"/>
@@ -78,7 +79,11 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => {
   return {...ownProps, ...stateProps, ...dispatchProps};
 };
 
+Game.defaultProps = {
+  themes: {}
+};
 Game.propTypes = propTypes;
+
 export default connect(
   mapStateToProps,
   mapDispatchToProps/* , */

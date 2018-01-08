@@ -1,24 +1,25 @@
 .Player {
-  border-top-left-radius: var(--border-radius-3, .5rem);
-  border-top-right-radius: var(--border-radius-3, .5rem);
+  border-top-left-radius: var(--border-radius-3);
+  border-top-right-radius: var(--border-radius-3);
   width: 100%;
 }
 
 .Player > header {
-  border-top-left-radius: var(--border-radius-3, .5rem);
-  border-top-right-radius: var(--border-radius-3, .5rem);
-  grid-gap: 10px;
+  border-top-left-radius: var(--border-radius-3);
+  border-top-right-radius: var(--border-radius-3);
+  grid-gap: var(--spacing-extra-small);
   display: grid;
-  grid-template-columns: 4fr 1fr;
-  background-color: #fff;
-  color: #444;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: var(--black-70);
+  padding: var(--spacing-extra-small, .25rem);
 }
 
 .Player > header > h3 {
   margin-top: var(--spacing-none);
   margin-bottom: var(--spacing-none);
   text-align: center;
-  padding: var(--spacing-small);
-
 }
 
+.Player > header > h3:first-child {
+  grid-column: 1 / 3;
+}

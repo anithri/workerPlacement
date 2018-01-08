@@ -4,9 +4,9 @@ import cx from "classnames";
 import { connect } from 'react-redux';
 import qPlayers from 'store/selectors/players';
 import qWorkers from "store/selectors/workers";
-import BadgeRow from "components/BadgeRow";
 import styles from "./styles.css";
 import actions from "redux-auto";
+import Badge from 'components/Badge';
 
 const propTypes = {
   className: PropTypes.string,
@@ -28,8 +28,10 @@ class Player extends React.Component {
         <header>
           <h3>{player.name}</h3>
           <h3>{player.score}</h3>
+          <Badge {...spheres[0]}/>
+          <Badge {...spheres[1]}/>
+          <Badge {...spheres[2]}/>
         </header>
-        <BadgeRow badges={spheres}/>
       </div>
     );
   }

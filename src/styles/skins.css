@@ -8,13 +8,10 @@
   color: var(--near-white, #f4f4f4);
 }
 
-.politburo {
+.proletariat {
   background-color: var(--dark-blue, #00449e);
   color: var(--near-white, #f4f4f4);
-}
 
-.proletariat {
-  background-color: var(--gold, #ffb700);
 }
 
 .redArmy {

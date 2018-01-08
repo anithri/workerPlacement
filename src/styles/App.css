@@ -11,6 +11,11 @@ html, body, #appContainer {
   margin: var(--spacing-none, 0);
 }
 
+#appContainer {
+  background-color: var(--near-white, #f4f4f4);
+  background-image: url('../assets/img/escheresque-dark.png');
+}
+
 h1:first-child,
 h2:first-child,
 h3:first-child,
@@ -19,3 +24,5 @@ h5:first-child,
 h6:first-child {
   margin-top: var(--spacing-none, 0);
 }
+
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */

@@ -7,15 +7,3 @@
   padding-top: var(--spacing-extra-small, .125rem);
   padding-bottom: var(--spacing-extra-small, .125rem);
 }
-
-.BadgeRow {
-  composes: basicFlexRow from global;
-  align-content: stretch;
-  align-items: stretch;
-  list-style: none;
-  padding: var(--spacing-none, 0);
-}
-
-.BadgeRow li {
-  flex: 1 1 auto;
-}

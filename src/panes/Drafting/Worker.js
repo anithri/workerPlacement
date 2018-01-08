@@ -1,39 +1,28 @@
 import React from "react";
 import cx from 'classnames';
+import styles from './styles.css';
+
+const CountDisplay = ({name, val}) => (
+  <p className={styles.countDisplay}>
+    <span className={styles.countName}>{name}</span>
+    <span className={styles.countVal}>{val}</span>
+  </p>
+);
 
 class Worker extends React.PureComponent {
-
-  render(){
+  render() {
     const {id, name, className, summary} = this.props;
     const {reserve, draw, active, dead} = summary || {};
     return (
-      <li key={id} className={cx(className)}>
-        <table>
-          <thead>
-          <tr>
-            <th colspan="2" className={id}>{name}</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td>In Bag:</td>
-            <td>{draw}</td>
-          </tr>
-          <tr>
-            <td>Active:</td>
-            <td>{active}</td>
-          </tr>
-          <tr>
-            <td>Reserve:</td>
-            <td>{reserve}</td>
-          </tr>
-          <tr>
-            <td>Dead:</td>
-            <td>{dead}</td>
-          </tr>
-          </tbody>
-        </table>
-      </li>
+      <div className={cx(styles.Worker, className)}>
+        <header className={cx(styles.header, id)}>
+          <h3>{name}</h3>
+        </header>
+        <CountDisplay name="In Bag" val={draw} />
+        <CountDisplay name="Active" val={active} />
+        <CountDisplay name="Reserve" val={reserve} />
+        <CountDisplay name="Dead" val={dead} />
+      </div>
     );
   }
 }

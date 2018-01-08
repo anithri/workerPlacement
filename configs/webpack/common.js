@@ -31,12 +31,7 @@ module.exports = {
                 importLoaders: 1
               }
             },
-            {
-              loader: 'postcss-loader',
-              options: {
-                sourceMap: true
-              }
-            }
+            'postcss-loader'
           ]
         })
       },
@@ -74,8 +69,6 @@ module.exports = {
             {
               loader: 'postcss-loader',
               options: {
-                sourceMap: true,
-                browsers: ['ie >= 10', 'last 3 versions'],
                 config: {
                   path: 'configs/postcss'
                 }

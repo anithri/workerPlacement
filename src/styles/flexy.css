@@ -4,7 +4,7 @@
   flex-wrap: nowrap;
   justify-content: center;
   align-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .basicFlexColumn {
@@ -28,5 +28,17 @@
 
 .basicFlexItem:last-child {
   margin-right: var(--spacing-none, 0);
+}
+
+.centered {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center;
+  & > * {
+    flex: 0 1 auto;
+  }
 }
 

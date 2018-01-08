@@ -18,7 +18,7 @@ class Drafting extends React.Component {
     const workerBlocks = this.props.workers.map(m => <Worker {...m} className={styles.block}/>);
     return (
       <div className={cssClasses}>
-        <ul className={styles.blockList}>{workerBlocks}</ul>
+        {workerBlocks}
         <DraftingBlock className={styles.draftingBlock} />
       </div>
     );

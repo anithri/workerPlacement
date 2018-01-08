@@ -1,50 +1,67 @@
 .Drafting {
-  background-color: var(--blue, #357edd);
-  composes: basicFlexColumn from global;
-  align-content: stretch;
-  align-items: stretch;
+  display: grid;
+  background-color: color(var(--blue, #357edd) a(70%));
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: var(--spacing-extra-small, .25rem);
   margin: var(--spacing-none, 0);
   padding: var(--spacing-extra-small, .25rem);
 }
 
-.blockList {
+.DraftingBlock {
+  composes: borders from global;
+  grid-column: 1 / 5;
+  width: 100%;
+  background-color: var(--black-20, rgba(0, 0, 0, .2));
+
+}
+
+.Worker {
+  composes: borders from global;
+  display: grid;
+  grid-gap: var(--spacing-extra-small);
+  background-color: var(--white-30, rgba(255, 255, 255, .3));
+}
+
+.header {
+  composes: centered from global;
+  border-top-left-radius: var(--border-radius-3);
+  border-top-right-radius: var(--border-radius-3);
+  text-align: center;
+
+  & h3 {
+    margin: var(--spacing-none, 0);
+    font-size: var(--font-size-5, 1rem);
+
+  }
+}
+
+.countDisplay:nth-of-type(even) {
+  background-color: var(--white-10, rgba(255, 255, 255, .1));
+
+}
+
+.countDisplay {
+  height: 100%;
+  vertical-align: baseline;
+  margin: var(--spacing-none, 0);
+  width: 100%;
   composes: basicFlexRow from global;
-  composes: basicFlexItem from global;
-  flex: 0 1 auto;
-  list-style: none;
-  margin: var(--spacing-none, 0);
-  margin-bottom: var(--spacing-extra-extra-small, .125rem);
-  padding: var(--spacing-none, 0);
+  justify-content: space-between;
+  padding-left: var(--spacing-extra-small, .25rem);
+  padding-right: var(--spacing-extra-small, .25rem);
+  font-size: var(--font-size-6, .875rem);
+  font-weight: 500;
+
 }
 
-.block {
-  composes: basicFlexItem from global;
-  composes: borders from global;
-  margin-left: var(--spacing-extra-extra-small, .125rem);
-  margin-right: var(--spacing-extra-extra-small, .125rem);
-  background-color: var(--white-40, rgba(255, 255, 255, .4));
-  & table {
-    width: 100%;
-  }
-  & td:last-child {
-    text-align: right;
-  }
-  & th {
-    text-align: center;
-    padding: var(--spacing-none, 0);
-
-  }
+.countName {
+  composes: basicGridItem from global;
+  float: left;
+  text-align: left;
 }
 
-.draftingBlock {
-  composes: basicFlexItem from global;
-  composes: borders from global;
-  margin: var(--spacing-none, 0);
-  margin-top: var(--spacing-extra-extra-small, .125rem);
-  flex: 1 1 auto;
-  background-color: var(--dark-blue, #00449e);
-}
-
-.item {
-  composes: basicFlexItem from global;
+.countVal {
+  composes: basicGridItem from global;
+  float: right;
+  text-align: right;
 }
