@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 import { connect } from 'react-redux';
-import qWorkers from 'store/selectors/workers';
+import qWorkers from 'concerns/workers/Selectors';
 import styles from "./styles.css";
 import Worker from "./Worker";
 import DraftingBlock from "./DraftingBlock";

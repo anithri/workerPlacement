@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-import { workerIds } from "./workers";
+import { workerIds } from "../workers/Defaults";
 
 function mkPool(val) {
   const workersDefault = {};

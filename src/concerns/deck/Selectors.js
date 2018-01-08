@@ -1,7 +1,6 @@
 import { createSelector } from 'reselect';
-import { shape } from "../defaults/deck";
-import defaultDeck from "../defaults/deck";
-import { cardIds } from "../defaults/cards";
+import defaultDeck, { shape } from "./Defaults";
+import { cardIds } from "../cards/Defaults";
 
 export const deal = (state) => {
   return {

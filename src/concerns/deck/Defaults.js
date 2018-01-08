@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import defaultPlayers from "./players.js";
+import defaultPlayers from "../players/Defaults";
 
 const players = Object.keys(defaultPlayers);
 

@@ -1,26 +1,26 @@
-import React from "react";
-import PropTypes from "prop-types";
-import cx from "classnames";
+import React from 'react';
+import PropTypes from 'prop-types';
+import cx from 'classnames';
 import { connect } from 'react-redux';
-import qDeck from 'store/selectors/deck';
-import qBag from "store/selectors/bag";
-import Player from "panes/Player";
-import Messages from "panes/Messages";
-import Drafting from "panes/Drafting";
-import Projects from "panes/Projects";
-import actions from "redux-auto";
+import qDeck from 'concerns/deck/Selectors';
+import qBag from 'concerns/bag/Selectors';
+import Player from 'panes/Player';
+import Messages from 'panes/Messages';
+import Drafting from 'panes/Drafting';
+import Projects from 'panes/Projects';
+import actions from 'redux-auto';
 
 const propTypes = {
   className: PropTypes.string,
   theme: PropTypes.objectOf(PropTypes.string),
   regions: PropTypes.objectOf({
-    "playerOne": PropTypes.string.isRequired,
-    "playerTwo": PropTypes.string.isRequired,
-    "playerThree": PropTypes.string.isRequired,
-    "playerFour": PropTypes.string.isRequired,
-    "drafting": PropTypes.string.isRequired,
-    "projects": PropTypes.string.isRequired,
-    "messages": PropTypes.string.isRequired
+    'playerOne': PropTypes.string.isRequired,
+    'playerTwo': PropTypes.string.isRequired,
+    'playerThree': PropTypes.string.isRequired,
+    'playerFour': PropTypes.string.isRequired,
+    'drafting': PropTypes.string.isRequired,
+    'projects': PropTypes.string.isRequired,
+    'messages': PropTypes.string.isRequired
   })
 
 };
@@ -46,10 +46,10 @@ class Game extends React.Component {
     const {className, regions, themes} = this.props;
     return (
       <div className={className}>
-        <Player className={regions.playerOne} playerId="One"/>
-        <Player className={regions.playerTwo} playerId="Two"/>
-        <Player className={regions.playerThree} playerId="Three"/>
-        <Player className={regions.playerFour} playerId="Four"/>
+        <Player className={regions.playerOne} playerId='One'/>
+        <Player className={regions.playerTwo} playerId='Two'/>
+        <Player className={regions.playerThree} playerId='Three'/>
+        <Player className={regions.playerFour} playerId='Four'/>
         <Drafting className={regions.drafting}/>
         <Projects className={regions.projects}/>
         <Messages className={regions.messages}/>

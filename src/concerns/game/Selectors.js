@@ -1,5 +1,5 @@
 import { createSelector } from 'reselect';
-import { shape } from "../defaults/game"
+import { shape } from "./Defaults"
 
 export const all = state => state.game;
 

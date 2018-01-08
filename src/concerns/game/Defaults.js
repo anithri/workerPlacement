@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import {playerIds} from "./players";
+import {playerIds} from "../players/Defaults";
 
 export const shape = PropTypes.shape({
   phase: PropTypes.number.required,

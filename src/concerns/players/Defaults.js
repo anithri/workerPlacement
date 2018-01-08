@@ -1,6 +1,6 @@
 import _shuffle from 'lodash/shuffle';
 
-import defaultWorkers from './workers';
+import defaultWorkers from '../workers/Defaults';
 
 const workers = _shuffle(Object.values(defaultWorkers)).map(w => w.id);
 

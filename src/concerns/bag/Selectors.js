@@ -1,6 +1,6 @@
 import { createSelector } from 'reselect';
-import { shape } from "../defaults/bag"
-import defaultBag from "../defaults/bag";
+import { shape } from "./Defaults"
+import defaultBag from "./Defaults";
 
 export const current = (state) => state.game.bag;
 export const workerSummaries = createSelector(

@@ -1,4 +1,4 @@
-import defaultCards from "../../defaults/cards";
+import defaultCards from "./Defaults";
 
 export default function reducer(cards = defaultCards, action) {
   return cards;

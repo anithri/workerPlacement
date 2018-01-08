@@ -1,7 +1,7 @@
 import { createSelector } from 'reselect';
 import _shuffle from "lodash/shuffle";
 
-import { shape } from "../defaults/cards"
+import { shape } from "./Defaults"
 
 export const all = state => state.cards;
 export const allIds = state => Object.keys(state.cards);

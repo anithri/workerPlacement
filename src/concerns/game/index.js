@@ -1,4 +1,4 @@
-import defaultgame from "../../defaults/game";
+import defaultgame from "./Defaults";
 
 export default function reducer(game = defaultgame, action) {
   return game;

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import cx from "classnames";
 import { connect } from 'react-redux';
 
-import messageSelectors from "store/selectors/messages";
+import messageSelectors from "concerns/messages/Selectors";
 
 import styles from "./styles.css";
 
@@ -12,7 +12,7 @@ const propTypes = {
   messages: PropTypes.arrayOf(messageSelectors.shape).isRequired
 };
 
-const Message = ({id, body}) => <li key={id} className={styles.message}>{body}</li>
+const Message = ({id, body}) => <li key={id} className={styles.message}>{body}</li>;
 
 class Messages extends React.Component {
   render() {
