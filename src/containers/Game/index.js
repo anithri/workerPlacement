@@ -39,7 +39,6 @@ class Game extends React.Component {
         bag: this.props.newBag
       });
     }
-    // generate a new deck
   }
 
   render() {

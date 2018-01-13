@@ -7,7 +7,7 @@ export const shape = PropTypes.shape({
 });
 
 const defaultGame = {
-  phase: -1,
+  round: 0,
   order: playerIds
 };
 

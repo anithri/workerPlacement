@@ -4,6 +4,7 @@ import cx from "classnames";
 import { connect } from 'react-redux';
 import qPlayers from 'concerns/players/Selectors';
 import qWorkers from 'concerns/workers/Selectors';
+
 import styles from "./styles.css";
 import actions from "redux-auto";
 import Badge from 'components/Badge';
@@ -41,6 +42,7 @@ const mapStateToProps = (state, ownProps) => {
   const player = qPlayers.find(ownProps.playerId, state);
   const workerIds = player.spheres;
   const spheres = workerIds.map(id => qWorkers.find(id, state));
+  const isCurrent = ownProps.playerId ===
   return {
     player,
     spheres

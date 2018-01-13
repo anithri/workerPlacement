@@ -1,7 +1,7 @@
 const defaultValues = {
   all: [{
-    id: 'testing',
-    body: "wut?"
+    id: 'welcome1',
+    body: "Welcome to the Game."
   }],
   showing: 6
 };
