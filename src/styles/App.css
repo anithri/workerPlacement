@@ -1,7 +1,9 @@
-@import './_variables.css';
-@import './_properties.css';
+@import './variables.css';
+@import './utils.css';
 @import './flexy.css';
+@import './grid.css';
 @import './skins.css';
+@import './structures.css';
 
 html, body, #appContainer {
   width: 100%;
@@ -13,7 +15,6 @@ html, body, #appContainer {
 
 #appContainer {
   background-color: var(--near-white, #f4f4f4);
-  background-image: url('../assets/img/escheresque-dark.png');
 }
 
 h1:first-child,

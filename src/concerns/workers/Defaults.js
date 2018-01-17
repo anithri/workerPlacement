@@ -28,25 +28,25 @@ const defaultValue = {
   kgb: {
     id: "kgb",
     name: "K.G.B.",
-    theme: "kgb",
+    theme: "purple",
     summary: {...summary}
   },
   party: {
     id: "party",
     name: "Party",
-    theme: "party",
+    theme: "green",
     summary: {...summary}
   },
   proletariat: {
     id: "proletariat",
     name: "Proletariat",
-    theme: "proletariat",
+    theme: "blue",
     summary: {...summary}
   },
   redArmy: {
     id: "redArmy",
     name: "Red Army",
-    theme: "redArmy",
+    theme: "red",
     summary: {...summary}
   }
 };

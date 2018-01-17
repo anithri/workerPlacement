@@ -1,0 +1,20 @@
+.gridBase {
+  --grid-display: grid;
+  --grid-gap: var(--spacing-small);
+  --grid-cols: 1fr;
+  --grid-rows: 1fr;
+
+  display: var(--grid-display);
+  grid-gap: var(--grid-gap);
+  grid-template-columns: var(--grid-cols);
+  grid-template-rows: var(--grid-rows);
+}
+
+.gridAreas {
+  --grid-areas: "header" "main" "footer";
+  grid-template-areas: var(--grid-areas);
+}
+
+.gridAreas > * {
+  grid-area: var(--grid-area);
+}

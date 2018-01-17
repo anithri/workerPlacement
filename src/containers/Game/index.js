@@ -12,8 +12,8 @@ import actions from 'redux-auto';
 
 const propTypes = {
   className: PropTypes.string,
-  theme: PropTypes.objectOf(PropTypes.string),
-  regions: PropTypes.objectOf({
+  grid: PropTypes.objectOf({
+    'Home': PropTypes.string.isRequired,
     'playerOne': PropTypes.string.isRequired,
     'playerTwo': PropTypes.string.isRequired,
     'playerThree': PropTypes.string.isRequired,
@@ -22,16 +22,16 @@ const propTypes = {
     'projects': PropTypes.string.isRequired,
     'messages': PropTypes.string.isRequired
   })
-
 };
 
 class Game extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      started: false,
-    }
+      started: false
+    };
   }
+
   componentDidMount() {
     if (this.props.phase < 0) {
       actions.game.start({
@@ -42,16 +42,17 @@ class Game extends React.Component {
   }
 
   render() {
-    const {className, regions, themes} = this.props;
+    const {className, grid} = this.props;
+
     return (
       <div className={className}>
-        <Player className={regions.playerOne} playerId='One'/>
-        <Player className={regions.playerTwo} playerId='Two'/>
-        <Player className={regions.playerThree} playerId='Three'/>
-        <Player className={regions.playerFour} playerId='Four'/>
-        <Drafting className={regions.drafting}/>
-        <Projects className={regions.projects}/>
-        <Messages className={regions.messages}/>
+        <Player className={grid.playerOne} playerId='playerOne' />
+        <Player className={grid.playerTwo} playerId='playerTwo' />
+        <Player className={grid.playerThree} playerId='playerThree' />
+        <Player className={grid.playerFour} playerId='playerFour' />
+        <Drafting className={grid.drafting} />
+        <Projects className={grid.projects} />
+        <Messages className={grid.messages} />
       </div>
     );
   }
@@ -66,7 +67,7 @@ const mapStateToProps = (state, ownProps) => {
     deck: state.game.deck,
     bag: state.game.bag,
     newDeck,
-    newBag,
+    newBag
   };
 };
 
@@ -78,9 +79,6 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => {
   return {...ownProps, ...stateProps, ...dispatchProps};
 };
 
-Game.defaultProps = {
-  themes: {}
-};
 Game.propTypes = propTypes;
 
 export default connect(

@@ -2,6 +2,13 @@ import React from "react";
 import cx from 'classnames';
 import styles from './styles.css';
 
+const themedWorker = ({className, theme, region, grid}) => {
+  cx(
+    styles.Worker,
+    className, theme, region, grid
+  )
+};
+
 const CountDisplay = ({name, val}) => (
   <p className={styles.countDisplay}>
     <span className={styles.countName}>{name}</span>
@@ -11,10 +18,10 @@ const CountDisplay = ({name, val}) => (
 
 class Worker extends React.PureComponent {
   render() {
-    const {id, name, className, summary} = this.props;
+    const {id, name, className, theme, summary} = this.props;
     const {reserve, draw, active, dead} = summary || {};
     return (
-      <div className={cx(styles.Worker, className)}>
+      <div className={cx(styles.Worker, className, theme)}>
         <header className={cx(styles.header, id)}>
           <h3>{name}</h3>
         </header>

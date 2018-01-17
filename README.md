@@ -32,3 +32,6 @@ Command | Description
 `npm run lint:js` | Run JavaScript linter
 `npm run lint:sass` | Run SASS linter
 `npm run start` | (alias of `npm run start-dev`)
+
+## Credits
+https://github.com/vikpe/react-webpack-babel-starter

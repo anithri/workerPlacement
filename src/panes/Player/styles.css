@@ -1,12 +1,16 @@
 .Player {
+  composes: triSection from global;
+  composes: flexCol from global;
+
   border-top-left-radius: var(--border-radius-3);
   border-top-right-radius: var(--border-radius-3);
-  width: 100%;
+
 }
 
 .Player > header {
   border-top-left-radius: var(--border-radius-3);
   border-top-right-radius: var(--border-radius-3);
+
   grid-gap: var(--spacing-extra-small);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -22,4 +26,12 @@
 
 .Player > header > h3:first-child {
   grid-column: 1 / 3;
+}
+
+.current {
+
+}
+
+.winner {
+
 }

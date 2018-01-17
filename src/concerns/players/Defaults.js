@@ -7,27 +7,31 @@ const workers = _shuffle(Object.values(defaultWorkers)).map(w => w.id);
 const combos = workers.map(skip => workers.filter(w => w != skip));
 
 const defaultValues = {
-  One: {
+  playerOne: {
     name: "Player One",
-    id: "One",
+    id: "playerOne",
+    theme: "playerOne",
     spheres: combos[0],
     score: 15,
   },
-  Two: {
+  playerTwo: {
     name: "Player Two",
-    id: "Two",
+    id: "playerTwo",
+    theme: "playerTwo",
     spheres: combos[1],
     score: 15,
   },
-  Three: {
+  playerThree: {
     name: "Player Three",
-    id: "Three",
+    id: "playerThree",
+    theme: "playerThree",
     spheres: combos[2],
     score: 15,
   },
-  Four: {
+  playerFour: {
     name:  "Player Four",
-    id: "Four",
+    id: "playerFour",
+    theme: "playerFour",
     spheres: combos[3],
     score: 15,
   }

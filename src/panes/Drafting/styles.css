@@ -20,6 +20,11 @@
   display: grid;
   grid-gap: var(--spacing-extra-small);
   background-color: var(--white-30, rgba(255, 255, 255, .3));
+
+  & header {
+    background-color: var(--theme-primary-bg-color);
+    color: var(--theme-primary-text-color);
+  }
 }
 
 .header {

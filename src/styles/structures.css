@@ -1,0 +1,45 @@
+
+.triSection,
+.biSection {
+  --wrapper-margin: var(--spacing-none);
+  --wrapper-padding: var(--spacing-small);
+  --header-fg-color: var(--white-20, rgba(255, 255, 255, .2));
+  --header-bg-color: var(--black-20, rgba(0, 0, 0, .2));
+  --main-fg-color: var(--black-20, rgba(0, 0, 0, .2));
+  --main-bg-color: var(--white-20, rgba(255, 255, 255, .2));
+
+  margin: var(--grid-margin);
+  padding: var(--grid-padding);
+
+}
+
+.triSection > header,
+.biSection > header {
+  background-color: var(--header-bg-color);
+  color: var(--header-fg-color);
+}
+
+.triSection > main,
+.biSection > main {
+  background-color: var(--main-bg-color);
+  color: var(--main-fg-color);
+  height: 100%;
+}
+
+.flatPane {
+  width: 100%;
+  height: 100%;
+  --main-bg-color: var(--near-white);
+  --main-background: var(--main-bg-color);
+  --main-fg-color: var(--near-black);
+  --main-margin: var(--spacing-none, 0rem);
+  --main-padding: var(--spacing-none, 0rem);
+  --main-border-color: var(--dark-gray, #333);
+  --main-border: thin solid var(--main-border-color);
+
+  background: var(--main-background);
+  color: var(--main-fg-colo);
+  margin: var(--main-margin);
+  padding: var(--main-padding);
+  border: var(--main-border);
+}

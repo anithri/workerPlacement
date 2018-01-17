@@ -12,10 +12,15 @@ export const currentPlayerId = createSelector(
   (playerIds, round) => playerIds[playerIds.length % round]
 );
 
+export const isCurrentPlayerId = (playerId, state) => {
+  return playerId === currentPlayerId(state);
+};
+
 const selectors = {
   shape,
   all,
-  find
+  find,
+  isCurrentPlayerId
 };
 
 export default selectors;

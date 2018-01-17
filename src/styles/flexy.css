@@ -1,3 +1,21 @@
+.flexCol {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: space-between;
+  align-items: flex-start;
+}
+
+.flexCol > main {
+  flex: 1 1 auto;
+}
+
+.flexCol > header,
+.flexCol > footer {
+  flex: 0 1 auto;
+}
+
 .basicFlexRow {
   display: flex;
   flex-direction: row;
