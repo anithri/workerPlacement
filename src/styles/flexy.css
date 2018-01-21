@@ -4,7 +4,7 @@
   flex-wrap: nowrap;
   justify-content: center;
   align-content: space-between;
-  align-items: flex-start;
+  align-items: stretch;
 }
 
 .flexCol > main {
@@ -55,8 +55,11 @@
   justify-content: center;
   align-content: stretch;
   align-items: center;
-  & > * {
-    flex: 0 1 auto;
-  }
+
+&
+> * {
+  flex: 0 1 auto;
+}
+
 }
 

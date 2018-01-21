@@ -2,7 +2,7 @@
 .triSection,
 .biSection {
   --wrapper-margin: var(--spacing-none);
-  --wrapper-padding: var(--spacing-small);
+  --wrapper-padding: var(--spacing-none);
   --header-fg-color: var(--white-20, rgba(255, 255, 255, .2));
   --header-bg-color: var(--black-20, rgba(0, 0, 0, .2));
   --main-fg-color: var(--black-20, rgba(0, 0, 0, .2));

@@ -3,7 +3,8 @@
   composes: gridBase from global;
   composes: gridAreas from global;
 
-  --grid-padding: var(--spacing-extra-small, .25rem);
+  padding: var(--spacing-extra-small, .25rem);
+  --rid-padding: var(--spacing-extra-small, .25rem);
   --grid-rows: 1fr 1fr 1fr 1fr;
   --grid-cols: 1fr 2fr 1fr;
   --grid-areas: "playerOne drafting playerTwo"
