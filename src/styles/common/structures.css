@@ -1,0 +1,45 @@
+
+.triSection,
+.biSection {
+  --default-section-border-radius: var(--border-radius-3, .5rem);
+
+  display: grid;
+  grid-gap: var(--spacing-none);
+  grid-template-columns: 1fr;
+  border-radius: var(--section-border-radius, var(--default-section-border-radius));
+}
+
+.biSection {
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "header" "main";
+}
+
+.triSection {
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header" "main" "foorer";
+}
+
+.triSection > header,
+.biSection > header {
+  grid-area: header;
+  border-top-right-radius: var(--section-border-radius, var(--default-section-border-radius));
+  border-top-left-radius: var(--section-border-radius, var(--default-section-border-radius));
+}
+
+.triSection > main,
+.biSection > main {
+  grid-area: main;
+}
+
+.biSection > main {
+  border-bottom-right-radius: var(--section-border-radius, var(--default-section-border-radius));
+  border-bottom-left-radius: var(--section-border-radius, var(--default-section-border-radius));
+
+}
+
+.triSection > footer {
+  grid-area: footer;
+  border-bottom-right-radius: var(--section-border-radius, var(--default-section-border-radius));
+  border-bottom-left-radius: var(--section-border-radius, var(--default-section-border-radius));
+}
+

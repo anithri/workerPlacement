@@ -1,0 +1,27 @@
+.playerOne {
+  grid-area: playerOne;
+}
+
+.playerTwo {
+  grid-area: playerTwo;
+}
+
+.playerThree {
+  grid-area: playerThree;
+}
+
+.playerFour {
+  grid-area: playerFour;
+}
+
+.drafting {
+  grid-area: drafting;
+}
+
+.projects {
+  grid-area: projects;
+}
+
+.messages {
+  grid-area: messages;
+}

@@ -1,0 +1,14 @@
+
+.borderedPane {
+  border-radius: var(--theme-border-radius, var(--border-radius-none));
+}
+
+.borderedPaneTop {
+  border-top-left-radius: var(--theme-border-radius, var(--border-radius-none));
+  border-top-right-radius: var(--theme-border-radius, var(--border-radius-none));
+}
+
+.borderedPaneBottom {
+  border-bottom-left-radius: var(--theme-border-radius, var(--border-radius-none));
+  border-bottom-right-radius: var(--theme-border-radius, var(--border-radius-none));
+}

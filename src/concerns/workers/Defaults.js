@@ -11,43 +11,42 @@ export const workerShape = PropTypes.shape({
     working: PropTypes.number.isRequired
   })
 });
+
 const summary = {
   draw: 0,
   reserve: 0,
   dead: 0,
   active: 0
 };
-export const shape = PropTypes.shape({
-  kgb: workerShape.isRequired,
-  party: workerShape.isRequired,
-  proletariat: workerShape.isRequired,
-  redArmy: workerShape.isRequired
-});
+
+export const shape = PropTypes.shape(PropTypes.objectOf(workerShape.isRequired));
 
 const defaultValue = {
-  kgb: {
-    id: "kgb",
-    name: "K.G.B.",
-    theme: "purple",
-    summary: {...summary}
-  },
-  party: {
-    id: "party",
-    name: "Party",
-    theme: "green",
-    summary: {...summary}
-  },
-  proletariat: {
-    id: "proletariat",
-    name: "Proletariat",
-    theme: "blue",
-    summary: {...summary}
-  },
-  redArmy: {
-    id: "redArmy",
-    name: "Red Army",
-    theme: "red",
-    summary: {...summary}
+  all: {
+    Red: {
+      id: "Red",
+      name: "Red",
+      theme: "workerRed",
+      summary: {...summary}
+    },
+    Blue: {
+      id: "Blue",
+      name: "Blue",
+      theme: "workerBlue",
+      summary: {...summary}
+    },
+    Green: {
+      id: "Green",
+      name: "Green",
+      theme: "workerGreen",
+      summary: {...summary}
+    },
+    Purple: {
+      id: "Purple",
+      name: "Purple",
+      theme: "workerPurple",
+      summary: {...summary}
+    }
   }
 };
 

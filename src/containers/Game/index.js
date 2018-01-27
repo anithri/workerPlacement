@@ -46,13 +46,13 @@ class Game extends React.Component {
 
     return (
       <div className={className}>
-        <Player className={grid.playerOne} playerId='playerOne' />
-        <Player className={grid.playerTwo} playerId='playerTwo' />
-        <Player className={grid.playerThree} playerId='playerThree' />
-        <Player className={grid.playerFour} playerId='playerFour' />
-        <Drafting className={grid.drafting} />
-        <Projects className={grid.projects} />
-        <Messages className={grid.messages} />
+        <Player className='playerOne' playerId='playerOne' />
+        <Player className='playerTwo' playerId='playerTwo' />
+        <Player className='playerThree' playerId='playerThree' />
+        <Player className='playerFour' playerId='playerFour' />
+        <Drafting className='drafting' />
+        <Projects className='projects' />
+        <Messages className='messages' />
       </div>
     );
   }

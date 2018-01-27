@@ -1,0 +1,43 @@
+:root {
+  // Heads of blocks
+
+  --theme-palette-main: var(--silver);
+  // text palette readable on palette
+  --theme-palette-main-text: var(--near-white);
+  // Contrast or highlight of contrasting palette
+  --theme-palette-contrast: var(--light-silver);
+  // text palette readable on palette
+  --theme-palette-contrast-text: var(--near-black);
+  // a dark contrast to palette
+  --theme-palette-dark: var(--near-black);
+  // text palette readable on palette
+  --theme-palette-dark-text: var(--near-white);
+  // a light contrast to palette
+  --theme-palette-light: var(--near-white);
+  // text palette readable on palette
+  --theme-palette-light-text: var(--near-black);
+
+  // Set of palettes where theme palette is strong
+  --theme-primary-accent: var(--theme-palette-main);
+  --theme-primary-bg: var(--theme-palette-main);
+  --theme-primary-highlight: var(--theme-palette-contrast);
+  --theme-primary-text: var(--theme-palette-main-text);
+
+  --theme-inverse-accent: var(--theme-palette-contrast);
+  --theme-inverse-bg: var(--theme-palette-contrast);
+  --theme-inverse-highlight: var(--theme-palette);
+  --theme-inverse-text: var(--theme-palette-contrast-text);
+
+  --theme-light-accent: var(--theme-palette);
+  --theme-light-bg: var(--theme-palette-light);
+  --theme-light-highlight: var(--theme-palette-contrast);
+  --theme-light-text: var(--theme-palette-light-text);
+
+  --theme-dark-accent: var(--theme-palette);
+  --theme-dark-bg: var(--theme-palette-dark);
+  --theme-dark-highlight: var(--theme-palette-contrast);
+  --theme-dark-text: var(--theme-palette-dark-text);
+
+  --theme-border-radius: var(--border-radius-3);
+
+}

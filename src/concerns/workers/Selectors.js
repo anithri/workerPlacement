@@ -2,8 +2,8 @@ import { createSelector } from 'reselect';
 import {shape, workerShape} from "./Defaults";
 import qBag from "../bag/Selectors";
 
-export const all = state => state.workers;
-export const ids = state => Object.keys(state.workers);
+export const all = state => state.workers.all;
+export const ids = state => Object.keys(state.workers.all);
 export const find = (workerId, state) => findWorker(workerId, state);
 
 export const findWorker = (workerId, state) => {

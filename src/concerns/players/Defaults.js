@@ -2,7 +2,7 @@ import _shuffle from 'lodash/shuffle';
 
 import defaultWorkers from '../workers/Defaults';
 
-const workers = _shuffle(Object.values(defaultWorkers)).map(w => w.id);
+const workers = _shuffle(Object.values(defaultWorkers.all)).map(w => w.id);
 
 const combos = workers.map(skip => workers.filter(w => w != skip));
 

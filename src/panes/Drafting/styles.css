@@ -1,4 +1,5 @@
 .Drafting {
+  composes: borderedPane from global;
   display: grid;
   background-color: color(var(--blue, #357edd) a(70%));
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -8,49 +9,46 @@
 }
 
 .DraftingBlock {
+  composes: borderedPane from global;
   composes: borders from global;
   grid-column: 1 / 5;
   width: 100%;
   background-color: var(--black-20, rgba(0, 0, 0, .2));
-
 }
 
 .Worker {
-  composes: borders from global;
-  display: grid;
-  grid-gap: var(--spacing-extra-small);
-  background-color: var(--white-30, rgba(255, 255, 255, .3));
-
-  & header {
-    background-color: var(--theme-primary-bg-color);
-    color: var(--theme-primary-text-color);
-  }
+  composes: biSection from global;
+  composes: borderedPane from global;
+  width: 100%;
 }
 
 .header {
+  width: 100%;
+  composes: themeHeader from global;
   composes: centered from global;
-  border-top-left-radius: var(--border-radius-3);
-  border-top-right-radius: var(--border-radius-3);
+}
+
+.header > h3 {
+  margin-top: var(--spacing-none);
+  margin-bottom: var(--spacing-none);
   text-align: center;
+}
 
-  & h3 {
-    margin: var(--spacing-none, 0);
-    font-size: var(--font-size-5, 1rem);
-
-  }
+.main {
+  width: 100%;
+  color: var(--white-80, rgba(255, 255, 255, .8));
+  composes: themeMain from global;
+  composes: flexCol from global;
 }
 
 .countDisplay:nth-of-type(even) {
   background-color: var(--white-10, rgba(255, 255, 255, .1));
-
 }
 
 .countDisplay {
-  height: 100%;
-  vertical-align: baseline;
-  margin: var(--spacing-none, 0);
-  width: 100%;
+  flex: 1 1 auto;
   composes: basicFlexRow from global;
+
   justify-content: space-between;
   padding-left: var(--spacing-extra-small, .25rem);
   padding-right: var(--spacing-extra-small, .25rem);

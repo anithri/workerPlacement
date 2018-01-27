@@ -1,6 +1,4 @@
 .Badge {
-  background-color: var(--theme-primary-bg-color);
-  color: var(--theme-primary-text-color);
   font-size: var(--font-size-6, .875rem);
   composes: borders from global;
   width: 100%;
@@ -8,9 +6,6 @@
   text-align: center;
   padding-top: var(--spacing-extra-small, .125rem);
   padding-bottom: var(--spacing-extra-small, .125rem);
+  border-radius: var(--border-radius-3, .5rem);
 
-  & .inverse {
-    background-color: var(--theme-inverse-bg-color);
-    color: var(--theme-inverse-bg-color);
-  }
 }

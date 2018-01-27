@@ -1,9 +1,13 @@
 @import './variables.css';
-@import './utils.css';
-@import './flexy.css';
-@import './grid.css';
+@import './themes.css';
+@import 'common/borders.css';
+@import 'common/utils.css';
+@import 'common/flexy.css';
 @import './skins.css';
-@import './structures.css';
+@import './pages.css';
+@import './regions.css';
+
+@import 'common/structures.css';
 
 html, body, #appContainer {
   width: 100%;

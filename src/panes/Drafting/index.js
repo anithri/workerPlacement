@@ -15,17 +15,17 @@ const propTypes = {
 class Drafting extends React.Component {
   render() {
     const cssClasses = cx(styles.Drafting, this.props.className);
-    const workerBlocks = this.props.workers.map(m => <Worker {...m} className={styles.block}/>);
+    const workerBlocks = this.props.workers.map(w => <Worker {...w} className={styles.block}/>);
     return (
       <div className={cssClasses}>
         {workerBlocks}
-        <DraftingBlock className={styles.draftingBlock} />
       </div>
     );
   }
 }
 
 const mapStateToProps = (state, ownProps) => {
+  console.log("====>",qWorkers.summarizedWorkers(state))
   return {
     workers: Object.values(qWorkers.summarizedWorkers(state)),
   };

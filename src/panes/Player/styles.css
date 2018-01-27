@@ -1,43 +1,32 @@
 .Player {
-  composes: triSection from global;
-  composes: flexCol from global;
-
-  border: var(--border-radius-3);
+  composes: Player from global;
+  composes: biSection from global;
 }
 
-.Player > header {
-  width: 100%;
+.header {
+  composes: themeHeader from global;
+  padding: var(--spacing-extra-extra-small, .125rem);
 
-  border-top-left-radius: var(--border-radius-3);
-  border-top-right-radius: var(--border-radius-3);
-
-  grid-gap: var(--spacing-extra-small);
   display: grid;
+  grid-template-rows: auto 1fr;
   grid-template-columns: 1fr 1fr 1fr;
-  background-color: var(--black-70);
-  padding: var(--spacing-extra-small, .25rem);
+  grid-gap: var(--spacing-extra-extra-small, .125rem);
 }
 
-.Player > header > h3 {
+.header > h3 {
   margin-top: var(--spacing-none);
   margin-bottom: var(--spacing-none);
   text-align: center;
 }
 
-.Player > header > h3:first-child {
+.header > h3.name {
   grid-column: 1 / 3;
 }
 
-.Player > main {
-  border-bottom-left-radius: var(--border-radius-3);
-  border-bottom-right-radius: var(--border-radius-3);
+.main {
+  grid-area: main;
+  composes: themeMain from global;
 
-
-}
-.current {
-
-}
-
-.winner {
-
+  border-bottom-left-radius: var(--theme-border-radius);
+  border-bottom-right-radius: var(--theme-border-radius);
 }

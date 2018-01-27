@@ -1,19 +1,60 @@
-.kgb {
+.workerPurple > .themeHeader {
   background-color: var(--purple, #5e2ca5);
   color: var(--near-white, #f4f4f4);
 }
 
-.party {
+.workerGreen > .themeHeader {
   background-color: var(--dark-green, #137752);
   color: var(--near-white, #f4f4f4);
 }
 
-.proletariat {
+.workerBlue > .themeHeader {
   background-color: var(--dark-blue, #00449e);
   color: var(--near-white, #f4f4f4);
 }
 
-.redArmy {
+.workerRed > .themeHeader {
   background-color: var(--dark-red, #e7040f);
   color: var(--near-white, #f4f4f4);
 }
+
+.Player > .themeMain {
+  color: var(--near-black);
+}
+
+.Player > .themeHeader {
+  background-color: var(--black-70, rgba(0, 0, 0, .7));
+}
+
+.playerOne > .themeHeader {
+  color: var(--washed-green-20);
+}
+
+.playerOne > .themeMain {
+  background-color: var(--washed-green-20);
+}
+
+.playerTwo > .themeHeader {
+  color: var(--washed-purple-20);
+}
+
+.playerTwo > .themeMain {
+  background-color: var(--washed-purple-20);
+}
+
+.playerThree > .themeHeader {
+  color: var(--washed-red-20);
+}
+
+.playerThree > .themeMain {
+  background-color: var(--washed-red-20);
+}
+
+.playerFour > .themeHeader {
+  color: var(--washed-yellow-20);
+}
+
+.playerFour > .themeMain {
+  background-color: var(--washed-yellow-20);
+}
+
