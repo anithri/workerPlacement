@@ -1,60 +1,102 @@
-.workerPurple > .themeHeader {
-  background-color: var(--purple, #5e2ca5);
-  color: var(--near-white, #f4f4f4);
+.defaultTheme .primary .background,
+.defaultTheme .primary.background,
+.defaultTheme.primary.background {
+  background-color: var(--blue);
 }
 
-.workerGreen > .themeHeader {
-  background-color: var(--dark-green, #137752);
-  color: var(--near-white, #f4f4f4);
+.defaultTheme .primary .text,
+.defaultTheme .primary.text,
+.defaultTheme.primary.text {
+  color: var(--near-white);
 }
 
-.workerBlue > .themeHeader {
+.defaultTheme .primary .border,
+.defaultTheme .primary.border,
+.defaultTheme.primary.border {
+  border: thin solid var(--dark-blue);
+}
+
+.defaultTheme .reading .background,
+.defaultTheme .reading.background,
+.defaultTheme.reading.background {
+  background-color: var(--near-white, #f4f4f4);
+}
+
+.defaultTheme .reading .text,
+.defaultTheme .reading.text,
+.defaultTheme.reading.text {
+  color: var(--near-black, #111);
+}
+
+.defaultTheme .reading .border,
+.defaultTheme .reading.border,
+.defaultTheme.reading.border {
+  border: thin solid var(--dark-blue, #00449e);
+}
+
+.defaultTheme .inverse .background,
+.defaultTheme .inverse.background,
+.defaultTheme.inverse.background {
+  background-color: var(--near-white, #f4f4f4);
+}
+
+.defaultTheme .inverse .text,
+.defaultTheme .inverse.text,
+.defaultTheme.inverse.text {
+  color: var(--blue, #357edd);
+}
+
+.defaultTheme .inverse .border,
+.defaultTheme .inverse.border,
+.defaultTheme.inverse.border {
+  border: thin solid var(--blue, #357edd);
+}
+
+.defaultTheme .outline .background,
+.defaultTheme .outline.background,
+.defaultTheme.outline.background {
+  background-color: transparent;
+}
+
+.defaultTheme .outline .text,
+.defaultTheme .outline.text,
+.defaultTheme.outline.text {
+  color: var(--blue, #357edd);
+}
+
+.defaultTheme .outline .border,
+.defaultTheme .outline.border,
+.defaultTheme.outline.border {
+  border: thin solid var(--blue, #357edd);
+}
+
+.defaultTheme .dark .background,
+.defaultTheme .dark.background,
+.defaultTheme.dark.background {
   background-color: var(--dark-blue, #00449e);
+}
+
+.defaultTheme .dark .text,
+.defaultTheme .dark.text,
+.defaultTheme.dark.text {
   color: var(--near-white, #f4f4f4);
 }
 
-.workerRed > .themeHeader {
-  background-color: var(--dark-red, #e7040f);
-  color: var(--near-white, #f4f4f4);
+.defaultTheme .dark .border,
+.defaultTheme .dark.border,
+.defaultTheme.dark.border {
+  border: thin solid var(--near-black, #111);
 }
 
-.Player > .themeMain {
-  color: var(--near-black);
+.border {
+
 }
 
-.Player > .themeHeader {
-  background-color: var(--black-70, rgba(0, 0, 0, .7));
+.text {
+
 }
 
-.playerOne > .themeHeader {
-  color: var(--washed-green-20);
-}
+.border {
 
-.playerOne > .themeMain {
-  background-color: var(--washed-green-20);
-}
-
-.playerTwo > .themeHeader {
-  color: var(--washed-purple-20);
-}
-
-.playerTwo > .themeMain {
-  background-color: var(--washed-purple-20);
-}
-
-.playerThree > .themeHeader {
-  color: var(--washed-red-20);
-}
-
-.playerThree > .themeMain {
-  background-color: var(--washed-red-20);
-}
-
-.playerFour > .themeHeader {
-  color: var(--washed-yellow-20);
-}
-
-.playerFour > .themeMain {
-  background-color: var(--washed-yellow-20);
 }
 

@@ -1,0 +1,16 @@
+.display {
+  text-align: center;
+  padding: var(--spacing-medium, 1rem);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.navigation > * {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+}

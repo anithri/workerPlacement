@@ -1,0 +1,4 @@
+.navigation {
+  text-align: center;
+  padding: var(--spacing-medium, 1rem);
+}

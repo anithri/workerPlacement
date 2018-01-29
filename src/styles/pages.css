@@ -1,4 +1,5 @@
 .Page {
+  @composes defaultTheme from global;
   width: 100%;
   height: 100%;
   padding: var(--spacing-small, .25rem);
@@ -10,13 +11,8 @@
 }
 
 .HomePage {
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-areas: "playerOne drafting playerTwo"
-                        "playerOne projects playerTwo"
-                        "playerOne projects playerTwo"
-                        "playerFour projects playerThree"
-                        "playerFour messages playerThree"
-                        "playerFour messages playerThree";
+  grid-template-areas: "navigation display adjust";
 }
 

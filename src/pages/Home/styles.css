@@ -1,3 +1,16 @@
 .home {
+  background-color: var(--near-white, #f4f4f4);
 }
 
+.navigation {
+  grid-area: navigation;
+}
+
+.display {
+  composes: paperTheme from global;
+  grid-area: display;
+}
+
+.adjust {
+  grid-area: adjust;
+}

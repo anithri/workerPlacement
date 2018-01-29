@@ -3,7 +3,9 @@ import PropTypes from "prop-types";
 import cx from "classnames";
 import styles from "./styles.css";
 
-import Game from "containers/Game";
+import Adjust from '../../panes/StyleAdjust';
+import Navigation from '../../panes/StyleNavigation';
+import Display from '../../panes/StyleDisplay';
 
 class Home extends React.Component {
   render() {
@@ -14,7 +16,11 @@ class Home extends React.Component {
     );
 
     return (
-      <Game className={cssClasses} grid={styles} />
+      <div className={cssClasses}>
+        <Adjust className={styles.adjust} />
+        <Navigation className={styles.navigation} />
+        <Display className={styles.display} />
+      </div>
     );
   }
 }
@@ -22,6 +28,5 @@ class Home extends React.Component {
 Home.propTypes = {
   className: PropTypes.string
 };
-
 
 export default Home;

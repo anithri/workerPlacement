@@ -14,7 +14,6 @@ class App extends React.Component {
   render() {
     const history = createHistory();
     const store = configureStore(history);
-    action.messages.add({body: "wooticus Prime!"});
     return (
       <Provider store={store}>
         <PageRouter history={history}/>

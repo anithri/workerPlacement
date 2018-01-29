@@ -1,0 +1,14 @@
+.swatch {
+  composes: text from global;
+  composes: background from global;
+  composes: border from global;
+
+  padding: var(--spacing-medium, 1rem);
+  composes: centered from global;
+
+  margin: var(--spacing-extra-small, .25rem);
+
+  & > * {
+    margin: 0;
+  }
+}
